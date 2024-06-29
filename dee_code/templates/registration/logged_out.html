@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="bg-black text-white">
+   <h1>Logged Out</h1>
+   <p>
+      You have been logged out successfully!
+      <a href="{% url "login" %}">Login Here...</a>
+   </p>
+   <p>Thanks for visiting 🐦 DeeTweet </p>
+</div>
+{% endblock %}

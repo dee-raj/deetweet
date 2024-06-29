@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Results - Dee-Coding
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+   <div class="row">
+      <div class="col-md-8 offset-md-2">
+         <div class="card">
+            <div class="card-body">
+               <h2 class="card-title mb-4">Search Results for "{{ query }}"</h2>
+
+               {% if results %}
+                  {% for item in results %}
+                     <div class="card mb-4">
+                        <img class="card-img-top" src="{{ item.photo.url }}" alt="Card image cap" style="object-fit: contain; height: 200px">
+                        <div class="card-body">
+                           <h5 class="card-title">{{ item.user.username }}</h5>
+                           <p class="card-text">{{ item.text }}</p>
+                           {% if item.user == user %}
+                              <div class="text-center">
+                                 <a href="{% url 'tweet_edit' item.id %}" class="btn btn-primary mx-2">Edit</a>
+                                 <a href="{% url 'tweet_delete' item.id %}" class="btn btn-danger mx-2">Delete</a>
+                              </div>
+                           {% endif %}
+                        </div>
+                     </div>
+                  {% endfor %}
+               {% endif %}
+
+               {% if tweets %}
+                  <h3 class="card-title mb-4">Related Tweets</h3>
+                  <ul class="list-group mb-4">
+                     {% for tweet in tweets %}
+                        <li class="list-group-item">{{ tweet }}</li>
+                     {% endfor %}
+                  </ul>
+               {% endif %}
+
+               {% if not results and not tweets %}
+                  <p>No results found.</p>
+               {% endif %}
+
+               <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                     document.getElementById('searchInput').value = '';
+                  });
+               </script>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}

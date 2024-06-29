@@ -1,6 +1,30 @@
-# venv
-.venv
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
 
-# cach
-__pycache__
-*/__pycache__/*
+# Virtual environment
+.venv/
+env/
+
+# Django related
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+
+# Static files (usually collected)
+staticfiles/
+
+# Local development settings
+local_settings.py
+
+# Backup files
+*~
+
+# Editor-specific temporary files
+.vscode/
+.idea/
+
+# Ignore .env file containing sensitive information
+.env
