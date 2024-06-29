@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Dee-code
+{% endblock %}
+
+{% block content %}
+
+   <h1 class="text-center text-white mt-5">
+      Are you sure thet you want to delete the tweet ?
+   </h1>
+
+   <form method='post'>
+      {% csrf_token %}
+      <div class="d-inline">
+         <button class="btn btn-danger">Yes</button>
+         <a href="{% url "tweet_list" %}" class='tbn btn-success font-bold rounded' style="padding:8px">NO</a>
+      </div>
+   </form>
+
+{% endblock %}

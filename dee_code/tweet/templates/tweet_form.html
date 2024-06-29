@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Dee-code
+{% endblock %}
+
+{% block content %}
+
+<div class="text-white container">
+   <h1 class="text-center mt-5" style="color: purple !important;">
+      Here You can create a new tweet
+   </h1>
+
+   <h2>
+      {% if form.instance.pk %}
+      Edit Tweet
+      {% else %}
+      Create Tweet
+      {% endif %}
+   </h2>
+   <form method="post" enctype="multipart/form-data" class="form">
+      {% csrf_token %}
+      {{form.as_p}}
+      <div class="d-inline p-10 m-10">
+         <button class="btn btn-warning" type="submit" >Submit</button>
+         <a href="{% url "tweet_list" %}" class='btn-error'>Back to Feed</a>
+      </div>
+   </form>
+</div>
+{% endblock %}
