@@ -3,12 +3,12 @@
    Brief description or introduction of your project.
 
 ## Table of Contents
-- [📝 Project Overview](#project-overview)
-- [🖥️ Demo](#demo)
-- [🚀 Installation](#installation)
-- [🔧 Usage](#usage)
-- [🤝 Contributing](#contributing)
-- [📄 License](#license)
+- [📝 Project Overview](#-project-overview)
+- [🖥️ Demo](#-demo)
+- [🚀 Installation](#-installation)
+- [🔧 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## 📝 Project Overview
 DeeTweet is a Django-based web application that allows users to post short messages (tweets) which can be viewed and interacted with by other users. It provides a simple and intuitive interface for sharing thoughts and updates.
@@ -17,7 +17,16 @@ DeeTweet is a Django-based web application that allows users to post short messa
 ## 🖥️ Demo
    Explore a live demo of DeeTweet.
 
-   - **Live Demo:** [DeeTweet Demo](http://www.example.com)
+   - **Live Demo:** [DeeTweet Demo](https://dhurbaraj.pythonanywhere.com/tweet/)
+
+### 🖼️ Front View
+
+![Front View](deetweet.png)
+
+
+### 🖼️ Front View Online
+
+![Front View](deetweet-online.png)
 
 ## 🚀 Installation
    Get DeeTweet up and running on your local machine.
@@ -86,6 +95,3 @@ We welcome contributions to make DeeTweet better! To contribute:
 ## 📄 License
    - This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### 🖼️ Front View
-
-![Front View](path/to/your/image.png)
